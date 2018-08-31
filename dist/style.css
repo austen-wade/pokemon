@@ -1,0 +1,11 @@
+@font-face {
+	font-family: 'Pokefont';
+	src: url('./pokefont.ttf') format('woff');
+}
+* {
+	letter-spacing: 1px;
+	font-family: 'Pokefont';
+	font-size: 20px;
+	font-smooth: never;
+	-webkit-font-smoothing : none;
+}
