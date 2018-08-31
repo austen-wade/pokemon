@@ -1,3 +1,8 @@
-import "./styles/main.scss";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './app.js';
 
-document.write('GYARADOS used SURF!');
+ReactDOM.render(
+	<App />,
+	document.getElementById('app')
+);
