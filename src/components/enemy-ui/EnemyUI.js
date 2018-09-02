@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.scss';
 
-export default class EnemyUI extends React.Component {
+class EnemyUI extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = { data: this.props.pokedata };
@@ -26,3 +26,5 @@ export default class EnemyUI extends React.Component {
 		)
 	}
 }
+
+export default EnemyUI;

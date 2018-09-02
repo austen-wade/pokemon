@@ -16,11 +16,6 @@ class App extends React.Component {
 			pokeDataOne: {},
 			pokeDataTwo: {}
 		};
-
-		this.handleClick = this.handleClick.bind(this);
-	}
-	handleClick() {
-		this.setState({ title: "Austen is alive" });
 	}
 	componentDidMount() {
 		fetch(API + randomInt( 1, 151 ))

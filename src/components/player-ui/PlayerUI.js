@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class PlayerUI extends React.Component {
+class PlayerUI extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -33,3 +33,5 @@ export default class PlayerUI extends React.Component {
 		console.log( this.props.pokedata );
 	}
 }
+
+export default PlayerUI;
