@@ -2,10 +2,16 @@
 	font-family: 'Pokefont';
 	src: url('./pokefont.ttf') format('woff');
 }
-* {
-	letter-spacing: 1px;
+body {
+	overflow: hidden;
+	padding: 20px;
+}
+body > #app {
+	font-size: 32px;
+	width: 100%;
+	height: 100%;
+	letter-spacing: 2px;
 	font-family: 'Pokefont';
-	font-size: 20px;
 	font-smooth: never;
 	-webkit-font-smoothing : none;
 }

@@ -37,6 +37,10 @@ module.exports = {
 						loader: "sass-loader" // compiles Sass to CSS
 					}
 				]
+			},
+			{
+				test: /\.json$/,
+				loader: 'json-loader'
 			}
 		]
 	},

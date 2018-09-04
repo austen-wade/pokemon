@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.scss';
+import './enemy-ui.scss';
 
 class EnemyUI extends React.Component {
 	constructor(props) {
@@ -7,20 +7,19 @@ class EnemyUI extends React.Component {
 		this.state = { data: this.props.pokedata };
 	}
 	render() {
-		let sprite;
+		let sprite = this.props.pokedata.sprites.front_default,
+			name = this.state.data.name;
 
-		if ( this.props.pokedata['sprites'] ) {
-			sprite = this.props.pokedata['sprites']['front_default'];
-		}
+		name = name.charAt(0).toUpperCase() + name.substr(1);
 		return (
-			<div className="top-wrap">
+			<div className="wrapper -top">
 				<div className="poke-ui">
-					<div className="poke-name">Ivysaur</div>
-					<div className="poke-level">47</div>
+					<div className="poke-name">{ name }</div>
+					<div className="poke-level">&nbsp;47</div>
 					<div className="poke-hp"></div>
 				</div>
 				<div className="poke-sprite-wrapper">
-				<img src={ this.state.data['sprites']['front_default'] } className="poke-sprite" />
+				<img src={ sprite } className="poke-sprite" />
 				</div>
 			</div>
 		)
