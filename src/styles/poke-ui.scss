@@ -3,7 +3,7 @@
 	grid-template-columns: 1fr 1fr;
 
 	> * {
-		border: 1px solid red;
+		max-height: 300px;
 	}
 
 	.poke-ui {
@@ -11,12 +11,12 @@
 			
 		}
 		.poke-level {
-			font-size: 0.8rem;
+			font-size: 1.2rem;
 
 			&:before {
-				content: "L:";
+				content: ":L";
 				font-weight: bold;
-				font-size: 0.6rem;
+				font-size: 1rem;
 			}
 		}
 		.poke-hp {
@@ -24,8 +24,14 @@
 		}
 	}
 	.poke-sprite-wrapper {
+		overflow: hidden;
+		display: grid;
+		justify-content: right;
+
 		.poke-sprite {
-			$spriteSize: 500px;
+			$spriteSize: 400px;
+
+			min-width: $spriteSize;
 		}
 	}
 
@@ -35,9 +41,18 @@
 	&.-bottom {
 
 		.poke-ui {
+			display: grid;
+			justify-content: right;
+			align-content: flex-end;
+			text-align: right;
+		}
+		.poke-sprite-wrapper {
+			justify-content: center;
 		}
 		.poke-sprite {
-			$spriteSize: 1000px;
+			position: relative;
+			top: -100px;
+			min-width: 600px;
 		}
 		.menu-wrapper {
 			height: 250px;
@@ -71,4 +86,19 @@
 			}
 		}
 	}
+}
+
+.poke-hp-bar {
+	font-size: 0.5em;
+	font-weight: bold;
+	progress {
+		height: 20px;
+		background-image: none;
+		color: blue;
+		-webkit-appearance: none;
+		appearance: none;
+	}
+	progress::-moz-progress-bar { background: blue; }
+	progress::-webkit-progress-value { background: blue; }
+
 }
