@@ -1,5 +1,4 @@
 import React from 'react';
-import './player-ui.scss';
 import UserInterface from '../userInterface/UserInterface';
 
 class PlayerUI extends React.Component {

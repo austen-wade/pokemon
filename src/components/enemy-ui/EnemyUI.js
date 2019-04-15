@@ -1,5 +1,4 @@
 import React from 'react';
-import './enemy-ui.scss';
 
 class EnemyUI extends React.Component {
 	constructor(props) {
